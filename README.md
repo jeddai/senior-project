@@ -1,8 +1,15 @@
 # CCT Senior Project (Spring 2017)
 ##### Links
+- [Details](#details)
 - [Project Proposals](#project-proposals)
+  - [Project 1: Sentiment Analysis](#project-1-sentiment-analysis-of-tweets-related-to-lipscomb-university)
+  - [Project 2: Trending Topics](#project-2-trending-topics-of-social-media-posted-from-lipscomb-university)
 
-## <a name="project-proposals"></a> Project Proposals
+## Details
+Class: Lauren Gardiner (DS), Nayeli Hernandez (WAD), Charles Humphreys (SENG)
+The project must incorporate some form of web application server, transactional database, and web interface, as well as a data science aspect in order to incorporate all of the participant's majors.
+
+## Project Proposals
 
 ##### Project 1: Sentiment Analysis of Tweets Related to Lipscomb University
 - Team Leader: Austin Humphreys
