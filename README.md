@@ -2,7 +2,7 @@
 ##### Links
 - [Project Proposals](#project-proposals)
 
-##<a name="project-proposals"></a> Project Proposals
+## <a name="project-proposals"></a> Project Proposals
 
 ##### Project 1: Sentiment Analysis of Tweets Related to Lipscomb University
 - Team Leader: Austin Humphreys
