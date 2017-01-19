@@ -1,3 +1,4 @@
+[![build status](https://gitlab.cct.lipscomb.edu/cahumphreys/senior-project/badges/master/build.svg)](https://gitlab.cct.lipscomb.edu/cahumphreys/senior-project/commits/master)
 # CCT Senior Project (Spring 2017)
 ##### Links
 - [Details](#details)
