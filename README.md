@@ -10,6 +10,8 @@
 Class: Lauren Gardiner (DS), Nayeli Hernandez (WAD), Charles Humphreys (SENG)
 The project must incorporate some form of web application server, transactional database, and web interface, as well as a data science aspect in order to incorporate all of the participant's majors.
 
+[Top](#cct-senior-project-spring-2017)
+
 ## Project Proposals
 
 ##### Project 1: Sentiment Analysis of Tweets Related to Lipscomb University
@@ -24,6 +26,8 @@ The project must incorporate some form of web application server, transactional 
 - Operating System: Ubuntu 16.04 LTS
 - Development Environment: NodeJS; some data analysis framework
 
+[Top](#cct-senior-project-spring-2017)
+
 ##### Project 2: Trending Topics of Social Media Posted from Lipscomb University
 - Team Leader: Austin Humphreys
 - Project Name: TBD
@@ -35,3 +39,5 @@ The project must incorporate some form of web application server, transactional 
 - Hardware: eSXI virtual server
 - Operating System: Ubuntu 16.04 LTS
 - Development Environment: NodeJS; some data analysis framework
+
+[Top](#cct-senior-project-spring-2017)
