@@ -1,11 +1,47 @@
 image: node:latest
 
+stages:
+  - test
+  - deploy
+
 cache:
   paths:
   - node_modules/
   - public/bower/
 
 test:
+  stage: test
   script:
+   - echo "Running tests"
    - npm install
    - ./node_modules/bower/bin/bower install --allow-root
+   - npm run test
+  only:
+  - master
+  - dev
+
+deploy_dev:
+  stage: deploy
+  script:
+    - echo "Deploy to dev server"
+    - npm install
+    - ./node_modules/bower/bin/bower install --allow-root
+    - PORT=3001 ./node_modules/forever/bin/forever start bin/www
+  environment:
+    name: dev
+    url: http://seniorprojectdev.cct.lipscomb.edu
+  when: manual
+  only:
+  - master
+  - dev
+
+deploy_prod:
+  stage: deploy
+  script:
+    - echo "Deploy to production server"
+  environment:
+    name: production
+    url:
+  when: manual
+  only:
+  - master
