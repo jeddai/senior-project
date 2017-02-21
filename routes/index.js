@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var constants = require('./services/constants');
 var PythonShell = require('python-shell');
 
 /* GET home page. */
@@ -9,7 +10,7 @@ router.get('/', function(req, res, next) {
     // results is an array consisting of messages collected during execution
     console.log('results: %j', results);
     return res.render('index', {
-      title: 'Express',
+      title: constants.title + 'Home',
       results: results
     });
   });
