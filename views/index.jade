@@ -1,8 +1,10 @@
 extends layout
 
 block content
-  div(ng-controller='HomeController as home' ng-cloak)
-    h1 {{ home.title }}
-    p Welcome to #{title}
-    p Data: #{JSON.stringify(results)}
-    a(href='/form' class='btn btn-default btn-xl') Start
+  div(ng-controller='HomeController as home' ng-cloak class='home-page')
+    div(class='jumbotron white text-center vertical-center')
+      div(class='container white')
+        h1 Would you survive the Titanic?
+        button(type='button' class='btn btn-secondary btn-lg white black-bg')
+          a(href='/form') Start
+

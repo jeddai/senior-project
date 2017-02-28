@@ -6,7 +6,7 @@
   function homeController() {
     var vm = this;
 
-    vm.title = "welcome to the titanic project thingy";
+    vm.title = "Would you survive?";
   }
 
 })();

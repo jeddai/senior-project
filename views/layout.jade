@@ -21,4 +21,20 @@ html
     script(src='/javascripts/components/home-controller.js')
     script(src='/javascripts/components/form-controller.js')
   body(ng-app='titanic')
+    nav(class='navbar navbar-inverse navbar-fixed-top')
+      div(class='container-fluid')
+        div(class='navbar-header')
+          button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false')
+            span(class='sr-only') Toggle Navigation
+            span(class='icon-bar')
+            span(class='icon-bar')
+            span(class='icon-bar')
+        div(class='collapse navbar-collapse' id='navbar')
+          ul(class='nav navbar-nav')
+            li
+              a(href='/') Home
+            li
+              a(href='/form') Form
+            li
+              a(href='#') Data
     block content

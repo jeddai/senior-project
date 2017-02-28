@@ -1,9 +1,9 @@
 var assert = require('assert');
 var expect = require('chai').expect;
-var request = require('request');
 var sinon = require('sinon');
-var app = require('../app.js');
-var index = require('../routes/index.js');
+var request = require('request');
+var app = require('../app');
+var index = require('../routes/index');
 
 app.listen(8000);
 

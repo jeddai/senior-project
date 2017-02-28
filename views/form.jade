@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    div(class='container' ng-controller='FormController as formCtrl')
+    div(class='container form-page' ng-controller='FormController as formCtrl')
         h1(class='text-center') Please enter the following information.
         div(class='container' style='border-style: solid; border-width: 1px; margin-bottom: 10px;')
             form(class='form' style='padding: 10px;')
@@ -53,5 +53,5 @@ block content
                         select(id='num_parents_children' class='form-control'
                         ng-model='formCtrl.form.num_parents_children')
                             option(ng-repeat='n in [] | range:10') {{ n }}
-        div(class='text-center')
+        div(class='text-center' style='margin-bottom: 10px')
             button(class='btn btn-primary' ng-click='formCtrl.submitForm()') Submit
