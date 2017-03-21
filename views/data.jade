@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    div(class='headings' ng-controller='DataController as data')
+        svg(width='960' height='960' class='col-sm-8')
+        div(class='form col-sm-4')
+            h3 Viewing Mode
+            select(class='form-control')
+                option(value='force' selected) Force Directed Graph
+            h3 Group By
+            p
+                input(type='checkbox' ng-checked='data.isPresent("pclass")' ng-click='data.toggle("pclass")')
+                | &nbsp; Class
+            p
+                input(type='checkbox' ng-checked='data.isPresent("par_ch")' ng-click='data.toggle("par_ch")')
+                | &nbsp; Number of parents and children
+            p
+                input(type='checkbox' ng-checked='data.isPresent("sib_sp")' ng-click='data.toggle("sib_sp")')
+                | &nbsp; Number of siblings and spouses
+            p
+                input(type='checkbox' ng-checked='data.isPresent("fare")' ng-click='data.toggle("fare")')
+                | &nbsp; Cost of fare
+            button(class='btn btn-sm btn-primary' ng-click='data.getNewData()') Apply Groups
+            div(ng-if='!!data.highlighted' ng-cloak)
+                h3 Highlighted
+                p Name: {{ data.highlighted.name }}
+                p Class: {{ data.highlighted.pclass }}
+                p Sex: {{ data.highlighted.sex}}
+                p Age: {{ data.highlighted.age }}
+                p Number of siblings/spouses: {{ data.highlighted.sib_sp}}
+                p Number of parents/children: {{ data.highlighted.par_ch}}
+                p Ticket: {{ data.highlighted.ticket}}
+                p Fare: ${{ data.highlighted.fare}}
+                p Cabin: {{ data.highlighted.cabin}}
+                p Embarked: {{ data.highlighted.embarked}}

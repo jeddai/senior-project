@@ -1,14 +1,14 @@
-var assert = require('assert');
-var expect = require('chai').expect;
-var sinon = require('sinon');
-var angular = require('../../bower/angular-mocks/angular-mocks');
-var homeCtrl = require('./home-controller');
-
 describe('Test home controller', function() {
-    beforeEach(angular.module('titanic'));
+    beforeEach(angular.mock.module('titanic'));
 
+    beforeEach(inject(function(_$controller_){
+        // The injector unwraps the underscores (_) from around the parameter names when matching
+        $controller = _$controller_;
+    }));
 
     it('should have the title', function() {
-        assert.equal(homeCtrl.title, 'Would you survive?');
+        var scope = {};
+        var ctrl = $controller('HomeController', { $scope:scope });
+        assert.equal(ctrl.title, 'Would you survive?');
     });
 });

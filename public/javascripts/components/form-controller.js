@@ -8,16 +8,21 @@
         var vm = this;
 
         vm.submitForm = submitForm;
+        vm.redirect = redirect;
 
         function submitForm() {
             $http.post('/form/submit', vm.form)
                 .then(function (res) {
                     if (res.data.survived) {
-                        window.location.href('/form/survived');
+                        vm.redirect('/form/survived');
                     } else {
-                        window.location.href('/form/died');
+                        vm.redirect('/form/died');
                     }
                 });
+        }
+
+        function redirect(url) {
+            window.location.href(url);
         }
     }
 

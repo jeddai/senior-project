@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "test": "./node_modules/mocha/bin/mocha **/*.spec.js --reporter spec"
+    "test": "./node_modules/mocha/bin/mocha **/*.spec.js --reporter spec && karma start",
+    "snyk-protect": "snyk protect"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,16 +23,26 @@
     "morgan": "~1.7.0",
     "multer": "^1.2.1",
     "python-shell": "^0.4.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "snyk": "^1.24.6"
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "jsdom": "^9.11.0",
+    "jsdom-global": "^2.1.1",
     "karma": "^1.5.0",
+    "karma-browserify": "^5.1.1",
+    "karma-chai": "^0.1.0",
     "karma-mocha": "^1.3.0",
     "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sinon": "^1.0.5",
+    "karma-spec-reporter": "0.0.30",
     "mocha": "^3.2.0",
     "mocha-mongoose": "^1.2.0",
     "request": "^2.79.0",
-    "sinon": "^1.17.7"
-  }
+    "requirejs": "^2.3.3",
+    "sinon": "^1.17.7",
+    "watchify": "^3.9.0"
+  },
+  "snyk": true
 }
