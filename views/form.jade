@@ -1,57 +1,58 @@
 extends layout
 
 block content
-    div(class='container form-page' ng-controller='FormController as formCtrl')
-        h1(class='text-center') Please enter the following information.
-        div(class='container' style='border-style: solid; border-width: 1px; margin-bottom: 10px;')
-            form(class='form' style='padding: 10px;')
-                div(class='col-sm-6')
-                    div(class='form-group')
-                        label(for='age') Age
-                        input(id='age' class='form-control' type='number' ng-model='formCtrl.form.age')
-                    div(class='form-group')
-                        label(for='gender') Gender
-                        div(id='gender' class='radio')
-                            label(class='radio-inline')
-                                input(type='radio' name='gender' value='male' ng-model='formCtrl.form.gender')
-                                | &nbsp; Male
-                            label(class='radio-inline')
-                                input(type='radio' name='gender' value='female' ng-model='formCtrl.form.gender')
-                                | &nbsp; Female
-                    div(class='form-group')
-                        label(for='class') Class
-                        div(id='class' class='radio')
-                            label(class='radio-inline')
-                                input(type='radio' name='class' value='upper' ng-model='formCtrl.form.class')
-                                | &nbsp; Upper
-                            label(class='radio-inline')
-                                input(type='radio' name='class' value='middle' ng-model='formCtrl.form.class')
-                                | &nbsp; Middle
-                            label(class='radio-inline')
-                                input(type='radio' name='class' value='lower' ng-model='formCtrl.form.class')
-                                | &nbsp; Lower
-                    div(class='form-group')
-                        label(for='fare') Fare
-                        select(id='fare' class='form-control' ng-model='formCtrl.form.fare')
-                            option 1
-                            option 2
-                            option 3
-                    div(class='form-group')
-                        label(for='port') Port
-                        select(id='port' class='form-control' ng-model='formCtrl.form.port')
-                            option 1
-                            option 2
-                            option 3
-                div(class='col-sm-6' ng-cloak)
-                    div(class='form-group')
-                        label(for='number_siblings_spouses') Number of siblings + spouses
-                        select(id='number_siblings_spouses' class='form-control'
-                            ng-model='formCtrl.form.num_siblings_spouses')
-                            option(ng-repeat='n in [] | range:10') {{ n }}
-                    div(class='form-group')
-                        label(for='num_parents_children') Number of parents + children
-                        select(id='num_parents_children' class='form-control'
-                        ng-model='formCtrl.form.num_parents_children')
-                            option(ng-repeat='n in [] | range:10') {{ n }}
-        div(class='text-center' style='margin-bottom: 10px')
-            button(class='btn btn-primary' ng-click='formCtrl.submitForm()') Submit
+    div(class='survival-form')
+        div(class='container form-page' ng-controller='FormController as formCtrl')
+            h1(class='text-center headings') Please enter the following information.
+            div(class='container' style='border-style: solid; border-width: 1px; margin-bottom: 10px;')
+                form(class='form' style='padding: 10px;')
+                    div(class='col-sm-6')
+                        div(class='form-group')
+                            label(for='age') Age
+                            input(id='age' class='form-control' type='number' ng-model='formCtrl.form.age')
+                        div(class='form-group')
+                            label(for='gender') Gender
+                            div(id='gender' class='radio')
+                                label(class='radio-inline')
+                                    input(type='radio' name='gender' value='male' ng-model='formCtrl.form.gender')
+                                    | &nbsp; Male
+                                label(class='radio-inline')
+                                    input(type='radio' name='gender' value='female' ng-model='formCtrl.form.gender')
+                                    | &nbsp; Female
+                        div(class='form-group')
+                            label(for='class') Class
+                            div(id='class' class='radio')
+                                label(class='radio-inline')
+                                    input(type='radio' name='class' value='upper' ng-model='formCtrl.form.class')
+                                    | &nbsp; Upper
+                                label(class='radio-inline')
+                                    input(type='radio' name='class' value='middle' ng-model='formCtrl.form.class')
+                                    | &nbsp; Middle
+                                label(class='radio-inline')
+                                    input(type='radio' name='class' value='lower' ng-model='formCtrl.form.class')
+                                    | &nbsp; Lower
+                        div(class='form-group')
+                            label(for='fare') Fare
+                            select(id='fare' class='form-control' ng-model='formCtrl.form.fare')
+                                option 1
+                                option 2
+                                option 3
+                        div(class='form-group')
+                            label(for='port') Port
+                            select(id='port' class='form-control' ng-model='formCtrl.form.port')
+                                option 1
+                                option 2
+                                option 3
+                    div(class='col-sm-6' ng-cloak)
+                        div(class='form-group')
+                            label(for='number_siblings_spouses') Number of siblings + spouses
+                            select(id='number_siblings_spouses' class='form-control'
+                                ng-model='formCtrl.form.num_siblings_spouses')
+                                option(ng-repeat='n in [] | range:10') {{ n }}
+                        div(class='form-group')
+                            label(for='num_parents_children') Number of parents + children
+                            select(id='num_parents_children' class='form-control'
+                            ng-model='formCtrl.form.num_parents_children')
+                                option(ng-repeat='n in [] | range:10') {{ n }}
+            div(class='text-center' style='margin-bottom: 10px')
+                button(class='btn btn-primary' ng-click='formCtrl.submitForm()') Submit

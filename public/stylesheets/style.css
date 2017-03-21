@@ -1,6 +1,5 @@
 body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px 'Open Sans', sans-serif;
 }
 
 .home-page {
@@ -43,3 +42,20 @@ body {
     margin-bottom: 0px;
 }
 
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.btn a {
+    color: white;
+
+}
+
+.survival-form {
+    padding: 50px;
+}
+
+.headings {
+    padding: 50px;
+}
